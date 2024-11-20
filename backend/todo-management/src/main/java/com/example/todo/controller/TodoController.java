@@ -65,7 +65,7 @@ public class TodoController {
 		}
 	}
 	
-	//display all the todos with project name - active projects
+	//display all the todos with project name - active projects - not needed for now
 	@GetMapping("/grouped-by-project")
     public ResponseEntity<Map<String, List<Todo>>> getTodosGroupedByProjectName() {
         Map<String, List<Todo>> groupedTodos = todoService.getTodosGroupedByProjectName();
