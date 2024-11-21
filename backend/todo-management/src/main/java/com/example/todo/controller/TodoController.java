@@ -43,34 +43,49 @@ public class TodoController {
 		return new ResponseEntity<List<Todo>>(todos, HttpStatus.OK);
 	}
 	
-	//update a todo(description, status)
-	@PutMapping("/{todoId}")
-	public ResponseEntity<Todo> updateTodo(@PathVariable Long todoId, @RequestBody Todo todo){
+	//update todo description
+	@PutMapping("/desc/{todoId}")
+	public ResponseEntity<Todo> updateTodoDescription(
+			@PathVariable Long todoId,
+			@RequestBody Map<String, String> request){
 		try {
-			Todo updateTodo = todoService.updateTodo(todoId, todo.getDescription(), todo.isStatus());
-			return new ResponseEntity<>(updateTodo, HttpStatus.OK);
+			String newDescription = request.get("description");
+			Todo updatedTodo = todoService.updateTodoDescription(todoId, newDescription);
+			return new ResponseEntity<Todo>(updatedTodo, HttpStatus.OK);
 		} catch (RuntimeException e) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
+	
+	//update todo status
+	@PutMapping("/status/{todoId}")
+	public ResponseEntity<Todo> updateTodoStatus(
+			@PathVariable Long todoId,
+			@RequestBody Map<String, Boolean> request){
+		try {
+			boolean newStatus = request.get("status");
+			Todo updatedTodo = todoService.updateTodoStatus(todoId, newStatus);
+			return new ResponseEntity<Todo>(updatedTodo, HttpStatus.OK);
+		} catch (RuntimeException e) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+	}
+	
 	
 	//delete a todo
 	@DeleteMapping("/{todoId}")
 	public ResponseEntity<Void> deleteTodo(@PathVariable Long todoId){
-		try {
-			todoService.deleteTodo(todoId);
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-		} catch (RuntimeException e) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		}
+		todoService.deleteTodo(todoId);
+		return ResponseEntity.noContent().build(); // Return 204 if successful
+		
 	}
 	
 	//display all the todos with project name - active projects - not needed for now
-	@GetMapping("/grouped-by-project")
-    public ResponseEntity<Map<String, List<Todo>>> getTodosGroupedByProjectName() {
-        Map<String, List<Todo>> groupedTodos = todoService.getTodosGroupedByProjectName();
-        return new ResponseEntity<>(groupedTodos, HttpStatus.OK);
-    }
+//	@GetMapping("/grouped-by-project")
+//    public ResponseEntity<Map<String, List<Todo>>> getTodosGroupedByProjectName() {
+//        Map<String, List<Todo>> groupedTodos = todoService.getTodosGroupedByProjectName();
+//        return new ResponseEntity<>(groupedTodos, HttpStatus.OK);
+//    }
 }
 
 

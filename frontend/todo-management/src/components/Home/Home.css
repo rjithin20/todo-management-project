@@ -1,0 +1,75 @@
+.home-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.create-project {
+  margin-bottom: 20px;
+}
+
+.create-project input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.create-project button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-project button:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.projects-table {
+  margin-top: 20px;
+}
+
+.projects-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.projects-table th,
+.projects-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.projects-table th {
+  background-color: #f4f4f4;
+}
+
+.projects-table a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.projects-table a:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}

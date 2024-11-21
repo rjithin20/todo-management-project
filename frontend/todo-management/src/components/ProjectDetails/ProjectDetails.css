@@ -1,0 +1,244 @@
+/* General container style */
+.project-details-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Title Section */
+h1 {
+  font-size: 30px;
+  color: #640b0b;
+  margin-bottom: 5px;
+}
+
+h1 input {
+  padding: 8px;
+  font-size: 18px;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Common Button Styling */
+button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  height: 40px; /* Uniform height for all buttons */
+  font-size: 14px; /* Uniform font size */
+  margin-right: 8px; /* Space between buttons */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Buttons with shared background color */
+button.default-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+button.default-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Buttons with shared background color for action */
+button.primary-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+button.primary-btn:hover {
+  background-color: #218838;
+}
+
+button.warning-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+button.warning-btn:hover {
+  background-color: #e0a800;
+}
+
+button.danger-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.danger-btn:hover {
+  background-color: #c82333;
+}
+
+button.info-btn {
+  background-color: rgba(100, 104, 105, 0.233);
+  color: white;
+}
+
+button.info-btn:hover {
+  background-color: rgba(25, 86, 101, 0.233);
+}
+
+/* Project Title Editing */
+.edit-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.update-btn,
+.cancel-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.update-btn {
+  background-color: #48d73e;
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #09b300;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Todo Section */
+.create-todo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.create-todo input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.create-todo button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-todo button:hover {
+  background-color: #218838;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Todos Table */
+.todos-table {
+  margin-top: 20px;
+}
+
+.todos-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todos-table th,
+.todos-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.todos-table th {
+  background-color: #f4f4f4;
+  font-size: 16px;
+}
+
+.todos-table td {
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.todos-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Todo Status Checkbox */
+.status-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Back Button */
+.back-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Export Gist Button */
+.export-gist-btn {
+  background-color: rgba(100, 104, 105, 0.233);
+}
+
+.export-gist-btn:hover {
+  background-color: rgba(25, 86, 101, 0.233);
+}
+
+/* Space for Buttons in Todos */
+.todos-table td button {
+  margin-right: 8px;
+}
+
+/* Buttons in Todo Actions */
+.edit-btn,
+.delete-btn,
+.update-btn,
+.cancel-btn,
+.export-gist-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
